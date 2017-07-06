@@ -1,0 +1,18 @@
+package Package2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class gcrshop {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:/Users/Prateek/Downloads/geckodriver-v0.16.1-win64/geckodriver.exe");
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.gcrit.com/build3/");
+		driver.findElement(By.xpath(".//*[@id='bodyContent']/div/div[1]/a[2]/u")).click();
+
+	}
+
+}

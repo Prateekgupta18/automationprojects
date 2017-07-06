@@ -1,0 +1,28 @@
+package Package2;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class gcrshop {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:/Users/Prateek/Downloads/geckodriver-v0.16.1-win64/geckodriver.exe");
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.gcrit.com/build3/");
+		driver.findElement(By.xpath(".//*[@id='bodyContent']/div/div[1]/a[2]/u")).click();
+		List <WebElement> radio = driver.findElements(By.className("fieldValue"));
+				radio.get(1).click();
+        driver.findElement(By.xpath(".//*[@id='bodyContent']/form/div/div[2]/table/tbody/tr[1]/td[2]/input[1]")).click();
+        driver.findElement(By.name("firstname")).sendKeys("Prateek");
+        driver.findElement(By.name("lastname")).sendKeys("Gupta");
+        driver.findElement(By.id("dob")).sendKeys("05/30/2017");
+        driver.findElement(By.name("email_address")).sendKeys("pgupta@tk20.com");
+        		
+	}
+
+}

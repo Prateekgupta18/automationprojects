@@ -1,0 +1,20 @@
+package Package2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class webdrivertestcase {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:/Users/Prateek/Downloads/geckodriver-v0.16.1-win64/geckodriver.exe");
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://en.wikipedia.org/wiki/Selenium_(software)");
+		driver.findElement(By.xpath(".//*[@id='pt-createaccount']/a")).click();
+		String capture = driver.getCurrentUrl();
+		System.out.println(capture);
+
+	}
+
+}

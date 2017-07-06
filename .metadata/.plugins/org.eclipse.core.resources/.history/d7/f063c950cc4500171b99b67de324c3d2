@@ -1,0 +1,40 @@
+package Package2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class webdrivertestcase {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.gecko.driver", "C:/Users/Prateek/Downloads/geckodriver-v0.16.1-win64/geckodriver.exe");
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://en.wikipedia.org/wiki/Selenium_(software)");
+		driver.findElement(By.linkText("Create account")).click();
+		String url = driver.getCurrentUrl();
+		//System.out.println(url);
+		if(url.contains("wikipedia.org")){
+			System.out.println("correct link or internal link");
+		}
+		else {
+			System.out.println("incorrect link");
+		}
+		Thread.sleep(5000);
+		driver.navigate().back();
+		driver.findElement(By.xpath(".//*[@id='mw-content-text']/table[2]/tbody/tr[10]/td")).click();
+		String url2 = driver.getCurrentUrl();
+		
+		Thread.sleep(5000);
+		
+		if(! url2.contains("wikipedia.org"))
+		{
+			System.out.println("correct link or enternal link- passed");
+		}
+		else {
+			System.out.println("incorrect link or external link failed");
+		}
+		Thread.sleep(5000);
+         driver.close();
+	}
+}

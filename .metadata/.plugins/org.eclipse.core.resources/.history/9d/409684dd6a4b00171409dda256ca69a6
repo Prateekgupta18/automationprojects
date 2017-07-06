@@ -1,0 +1,25 @@
+package Package2;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class userdefined {
+	public void adminlogin(){
+		System.setProperty("webdriver.gecko.driver", "C:/Users/Prateek/Downloads/geckodriver-v0.16.1-win64/geckodriver.exe");
+
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://www.gcrit.com/build3/admin");
+		driver.findElement(By.name("username")).sendKeys("admin");
+		driver.findElement(By.name("password")).sendKeys("admin@123");
+		driver.findElement(By.id("tdb1")).click();
+	
+	}
+
+	public static void main(String[] args) {
+		userdefined obj = new userdefined();
+		obj.adminlogin();
+
+	}
+
+}

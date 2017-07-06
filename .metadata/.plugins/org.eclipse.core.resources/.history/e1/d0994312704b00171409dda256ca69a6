@@ -1,0 +1,24 @@
+package Package2;
+
+import java.util.concurrent.TimeUnit;
+
+public class inherits extends userdefined {
+
+	public static void main(String[] args) {
+		inherits obj2 = new inherits();
+		obj2.launchbrowser();
+		obj2.adminlogin();
+		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		String url = driver.getCurrentUrl();
+		if (url.equals("http://www.gcrit.com/build3/admin/index.php"))
+		{
+			System.out.println("passed");
+		}
+		else {
+			System.out.println("failed");
+		}
+		
+
+	}
+
+}

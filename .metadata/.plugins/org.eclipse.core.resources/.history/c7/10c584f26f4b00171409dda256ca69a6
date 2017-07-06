@@ -1,0 +1,21 @@
+package Package2;
+
+public class inherits extends userdefined {
+
+	public static void main(String[] args) {
+		inherits obj2 = new inherits();
+		obj2.launchbrowser();
+		obj2.adminlogin();
+		String url = driver.getCurrentUrl();
+		if (url.equals("http://www.gcrit.com/build3/admin/index.php"))
+		{
+			System.out.println("passed");
+		}
+		else {
+			System.out.println("failed");
+		}
+		
+
+	}
+
+}

@@ -1,0 +1,25 @@
+package prateekpackage;
+
+public class Firstclass {
+
+	void Firstclass1()
+
+	static
+	{
+		System.out.println("in static");
+		
+	}
+	public static void demo()
+	
+	{
+		System.out.println("in demo");
+		
+	}
+	public static void main(String[] args) {
+		Firstclass hello = new Firstclass();
+		hello.Firstclass1();
+		demo();
+		
+	}
+
+}

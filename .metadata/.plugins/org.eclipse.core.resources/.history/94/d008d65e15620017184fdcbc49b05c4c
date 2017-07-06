@@ -1,0 +1,26 @@
+package prateekpackage;
+
+public class Firstclass {
+
+	Firstclass()
+	{
+		System.out.println("in constructor");
+	}
+	static
+	{
+		System.out.println("in static");
+		
+	}
+	public static void demo()
+	
+	{
+		System.out.println("in demo");
+		
+	}
+	public static void main(String[] args) {
+		Firstclass hello = new Firstclass();
+		demo();
+		
+	}
+
+}

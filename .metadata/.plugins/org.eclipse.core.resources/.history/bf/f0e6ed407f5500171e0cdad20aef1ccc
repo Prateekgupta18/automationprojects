@@ -1,0 +1,41 @@
+package MavenTest.ArtifactMavenProject;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class NewTest2 {
+  
+	@Test
+  public void Login() 
+  {
+	  System.out.println("Login Successfull");
+  }
+  @Test (dependsOnMethods = {"Login"})
+  public void Alip() 
+  {
+	  System.out.println("Alip Successfull");
+  }
+  @Test (dependsOnMethods = {"Alip"})
+  public void Recharge() 
+  {
+	  System.out.println("Recharge Successfull");
+  }
+  @Test
+  public void Order() 
+  {
+	  System.out.println("Order Successfull");
+  }
+  @Test
+  public void Zrder() 
+  {
+	  System.out.println("Zrder Successfull");
+  }
+  @AfterClass
+  public void Logout() 
+  {
+	  System.out.println("Logout Successfull");
+  }
+}   

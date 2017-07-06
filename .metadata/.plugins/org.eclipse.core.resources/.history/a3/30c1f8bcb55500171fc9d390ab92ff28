@@ -1,0 +1,42 @@
+package Package1;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+
+public class locators {
+	public void takesceenshot(WebDriver driver, String filepath) throws IOException{
+		
+		TakesScreenshot scrShot =((TakesScreenshot)driver);
+		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+		   File DestFile=new File(filepath);
+               
+                FileUtils.copyFile(SrcFile, DestFile);
+		
+	}
+	
+
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.gecko.driver", "C:/Users/Prateek/Downloads/geckodriver-v0.16.1-win64/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+	    driver.get("https://testing1.tk20.com/campustoolshighered/start.do");
+	    
+	    Thread.sleep(2000);
+	    
+	    
+		driver.findElement(By.name("user")).sendKeys("pgupta@tk20.com");
+		driver.findElement(By.name("pass")).sendKeys("t3stf1rst");
+		locators dd = new locators();
+		dd.takesceenshot(driver, "d:\\newscreenshot.png");
+
+	}
+
+}

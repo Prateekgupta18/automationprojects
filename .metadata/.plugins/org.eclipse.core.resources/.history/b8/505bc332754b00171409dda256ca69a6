@@ -1,0 +1,29 @@
+package Package2;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+
+public class inherits2 extends userdefined {
+
+	public static void main(String[] args) {
+		inherits2 obj3 = new inherits2();
+		obj3.launchbrowser();
+		obj3.adminlogin("admina","admin@123a");
+		
+		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
+		
+		String errormessage = driver.findElement(By.className("messageStackError")).getText();
+		if (errormessage.contains("Error: Invalid administrator login attempt"))
+		{
+			System.out.println("passed");
+		}
+		else
+		{
+			System.out.println("failed");
+		}
+		obj3.close();
+	}
+	
+
+}
