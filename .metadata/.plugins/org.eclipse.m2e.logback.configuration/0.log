@@ -1264,3 +1264,7 @@ org.eclipse.core.runtime.CoreException: Variable references non-existent resourc
 2017-07-06 11:59:36,964 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Prateek\workspace\First Project\DemoMavenEclipseProject\src\main\resources
 2017-07-06 11:59:36,966 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2017-07-06 11:59:36,966 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Prateek\workspace\First Project\DemoMavenEclipseProject\src\test\resources
+2017-07-06 16:53:18,215 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-06 16:53:18,655 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Prateek\workspace\First Project\DemoMavenEclipseProject\src\main\resources
+2017-07-06 16:53:18,657 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2017-07-06 16:53:18,657 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Prateek\workspace\First Project\DemoMavenEclipseProject\src\test\resources

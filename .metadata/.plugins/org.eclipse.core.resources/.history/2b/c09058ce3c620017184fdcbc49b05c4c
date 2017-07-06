@@ -14,7 +14,7 @@ public class Apachepoitc {
 
 	public static void main(String[] args) throws Exception {
    //This is to open the Excel file. Excel path, file name and the sheet name are parameters to this method
-   ExcelUtils.setExcelFile(Constants.Pathtestdata + Constants.filetestdata,"Sheet1" );
+   ExcelUtils.setExcelFile(Constants.Pathtestdata + Constants.filetesdata,"Sheet1" );
    System.setProperty("webdriver.gecko.driver", "C:/Users/Prateek/Downloads/geckodriver-v0.16.1-win64/geckodriver.exe");
 	driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
